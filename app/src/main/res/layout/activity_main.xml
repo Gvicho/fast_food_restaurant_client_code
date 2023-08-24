@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/backgraund">
+
+    <TextView
+        android:id="@+id/menuTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Menu"
+        android:textColor="#3F51B5"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Pizza Item -->
+    <LinearLayout
+        android:id="@+id/pizzaLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menuTextView">
+
+        <TextView
+            android:id="@+id/pizzaNameTextView"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="115dp"
+            android:text="Pizza"
+            android:textColor="#009688"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/pizzaAddButton" />
+
+        <Button
+            android:id="@+id/pizzaAddButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:text="+"
+            app:layout_constraintBaseline_toBaselineOf="@id/pizzaNameTextView"
+            app:layout_constraintStart_toEndOf="@id/pizzaNameTextView" />
+
+    </LinearLayout>
+
+    <!-- Burger Item -->
+    <LinearLayout
+        android:id="@+id/burgerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/pizzaLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/burgerNameTextView"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="115dp"
+            android:text="Burger"
+            android:textColor="#009688"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/burgerAddButton" />
+
+        <Button
+            android:id="@+id/burgerAddButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/burgerNameTextView"
+            app:layout_constraintStart_toEndOf="@id/burgerNameTextView"/>
+
+    </LinearLayout>
+
+    <!-- Hotdog Item -->
+    <LinearLayout
+        android:id="@+id/hotdogLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/burgerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/hotdogNameTextView"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="115dp"
+            android:text="Hotdog"
+            android:textColor="#009688"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/hotdogAddButton" />
+
+        <Button
+            android:id="@+id/hotdogAddButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/hotdogNameTextView"
+            app:layout_constraintStart_toEndOf="@id/hotdogNameTextView"/>
+
+    </LinearLayout>
+
+    <!-- Cola Item -->
+    <LinearLayout
+        android:id="@+id/colaLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/hotdogLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/colaNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="110dp"
+            android:text="CoCa-CoLa"
+            android:textColor="#009688"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/colaAddButton" />
+
+        <Button
+            android:id="@+id/colaAddButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/colaNameTextView"
+            app:layout_constraintStart_toEndOf="@id/colaNameTextView"/>
+
+    </LinearLayout>
+
+    <!-- Total Price and Order Button -->
+    <LinearLayout
+        android:id="@+id/totalLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/colaLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="105dp"
+            android:text="Total: 0 GEL"
+            android:textColor="#009688"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/orderButton" />
+
+        <Button
+            android:id="@+id/orderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/totalTextView"
+            app:layout_constraintStart_toEndOf="@id/totalTextView"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
